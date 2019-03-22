@@ -7,19 +7,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
-<header>
-    <h1>@FOSS@AMRITA MEMBERS</h1>
-    <p class="description" style="display: block;">There are <strong><span id="count">21</span> public members at GitHub</strong>, from all over the globe.</p>
-</header>
-<org-members>
-    <!-- User template -->
-    <user>
-        <a href="{{html_url}}" target="blank">
-            <img src="{{avatar_url}}" alt="" class="avatar">
-            <span class="name">{{login}}</span>
-        </a>
-    </user>
-</org-members>
+<div class="container">
+    <header>
+        <h1>FOSS@AMRITA MEMBERS</h1>
+        <p class="description" style="display: block;">There are <strong><span id="count">21</span> public members at GitHub</strong>, from all over the globe.</p>
+    </header>
+    <org-members>
+        <!-- User template -->
+        <user>
+            <a href="{{html_url}}" target="blank">
+                <img src="{{avatar_url}}" alt="" class="avatar">
+                <span class="name">{{login}}</span>
+            </a>
+        </user>
+    </org-members>
+</div>
 
 <!-- Include the script on the page -->
 <script src="src/members.js"></script>
