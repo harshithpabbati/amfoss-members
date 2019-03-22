@@ -1,0 +1,184 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css);
+@import url("caiuss.min.css");
+
+body, html {
+    background: #ecf0f1;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+/* btn */
+.btn:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* header */
+header, p.copyright {
+    background-color: #e74c3c;
+    background-image: url("bg.png");
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header {
+    font-weight: 100;
+    padding: 60px 0;
+    margin-bottom: 20px;
+}
+
+header > h1 {
+    font-weight: 100;
+    margin: 0;
+}
+
+header > .description {
+    display: none;
+    margin: 0;
+}
+
+header > .buttons {
+    margin-top: 28px;
+}
+
+p.copyright {
+    padding: 26px;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.img {
+    border-radius: 4px;
+}
+
+.img:hover {
+    opacity: 0.7;
+}
+
+/* user */
+user {
+    width: 212px;
+    display: inline-block;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+user img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.39);
+}
+
+user img,
+user span {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+user span {
+    position: relative;
+    top: -70px;
+    opacity: 0;
+    color: black;
+    font-size: 25px;
+}
+
+user a {
+    text-decoration: none;
+}
+
+user:hover img {
+    opacity: 0.2;
+}
+
+user:hover span {
+    opacity: 1;
+}
+
+
+/* footer */
+.copyright > a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.copyright > a:hover {
+    text-decoration: underline;
+}
+/* selector */
+
+.selector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -70px;
+}
+
+.selector, .selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.selector button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #428bca;
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  transition: all .1s;
+}
+
+.selector button:hover {
+  background: #3071a9;
+}
+
+.selector button:focus {
+  outline: none;
+}
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -130px;
+  right: -130px;
+  bottom: -130px;
+  left: -130px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector img.avatar {
+    width: 120px;
+    border-radius: 100%;
+    margin-left: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+}
+
+.selector.close li {
+    opacity: 0;
+}

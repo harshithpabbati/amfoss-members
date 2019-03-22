@@ -1,0 +1,45 @@
+<!-- Organization members container -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AMFOSS Members</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/amfoss/cms/master/pages/static/pages/images/logos/logo_alt_light.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<header>
+    <h1>@FOSS@AMRITA MEMBERS</h1>
+    <p class="description" style="display: block;">There are <strong><span id="count">21</span> public members at GitHub</strong>, from all over the globe.</p>
+</header>
+<org-members>
+    <!-- User template -->
+    <user>
+        <a href="{{html_url}}" target="blank">
+            <img src="{{avatar_url}}" alt="" class="avatar">
+            <span class="name">{{login}}</span>
+        </a>
+    </user>
+</org-members>
+
+<!-- Include the script on the page -->
+<script src="src/github-org-members.js"></script>
+
+<script>
+    var orgMembers = GhOrgMembers({
+
+        // Select the container
+        container: "org-members"
+
+        // The user element
+      , user: "user"
+
+        // Provide the organization name
+      , org: "github"
+    });
+
+    orgMembers.done = function (err, data) {
+        if (err) { return; }
+        document.getElementById("count").innerHTML = data.length.toString();
+        document.querySelector(".description").style.display = "block";
+    };
+</script>
